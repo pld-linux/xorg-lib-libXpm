@@ -16,6 +16,8 @@ BuildRequires:	libtool
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	libXpm
+Obsoletes:	xpm
 BuildRoot:	%{tmpdir}/libXpm-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -33,6 +35,8 @@ Summary(pl):	Pliki nag³ówkowe do biblioteki libXpm
 Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXpm = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
+Obsoletes:	libXpm-devel
+Obsoletes:	xpm-devel
 
 %description devel
 X Pixmap library.
@@ -52,6 +56,8 @@ Summary:	Static libXpm libraries
 Summary(pl):	Biblioteki statyczne libXpm
 Group:		Development/Libraries
 Requires:	xorg-lib-libXpm-devel = %{version}-%{release}
+Obsoletes:	libXpm-static
+Obsoletes:	xpm-static
 
 %description static
 X Pixmap library.
@@ -69,6 +75,7 @@ Summary:	X Pixmap utilities
 Summary(pl):	Programy uzytkowe dla X Pixmap
 Group:		Development/Libraries
 Requires:	xorg-lib-libXpm-devel = %{version}-%{release}
+Obsoletes:	xpm-progs
 
 %description utils
 X Pixmap utilities.
