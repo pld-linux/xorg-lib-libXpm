@@ -1,5 +1,3 @@
-
-#
 Summary:	X Pixmap library
 Summary(pl):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
@@ -13,12 +11,12 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXpm
 Obsoletes:	xpm
-BuildRoot:	%{tmpdir}/libXpm-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -28,12 +26,11 @@ X Pixmap library.
 %description -l pl
 Biblioteka X Pixmap.
 
-
 %package devel
 Summary:	Header files libXpm development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXpm
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXpm = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
 Obsoletes:	libXpm-devel
 Obsoletes:	xpm-devel
@@ -50,12 +47,11 @@ Biblioteka X Pixmap.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXpm.
 
-
 %package static
-Summary:	Static libXpm libraries
-Summary(pl):	Biblioteki statyczne libXpm
-Group:		Development/Libraries
-Requires:	xorg-lib-libXpm-devel = %{version}-%{release}
+Summary:	Static libXpm library
+Summary(pl):	Biblioteka statyczna libXpm
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXpm-static
 Obsoletes:	xpm-static
 
@@ -69,20 +65,18 @@ Biblioteka X Pixmap.
 
 Pakiet zawiera statyczn± bibliotekê libXpm.
 
-
 %package utils
 Summary:	X Pixmap utilities
-Summary(pl):	Programy uzytkowe dla X Pixmap
-Group:		Development/Libraries
-Requires:	xorg-lib-libXpm-devel = %{version}-%{release}
+Summary(pl):	Programy u¿ytkowe dla X Pixmap
+Group:		X11/Development/Tools
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	xpm-progs
 
 %description utils
 X Pixmap utilities.
 
 %description utils -l pl
-Programy uzytkowe dla X Pixmap.
-
+Programy u¿ytkowe dla X Pixmap.
 
 %prep
 %setup -q -n libXpm-%{version}
@@ -109,25 +103,21 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog FAQ.html README.html
-%attr(755,root,wheel) %{_libdir}/libXpm.so.*
-
+%attr(755,root,root) %{_libdir}/libXpm.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/xpm.h
+%attr(755,root,root) %{_libdir}/libXpm.so
 %{_libdir}/libXpm.la
-%attr(755,root,wheel) %{_libdir}/libXpm.so
+%{_includedir}/X11/xpm.h
 %{_pkgconfigdir}/xpm.pc
-
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libXpm.a
-
 
 %files utils
 %defattr(644,root,root,755)
