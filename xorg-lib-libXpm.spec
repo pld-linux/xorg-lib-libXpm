@@ -1,18 +1,20 @@
 Summary:	X Pixmap library
 Summary(pl):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
-Version:	3.5.2
-Release:	0.02
+Version:	3.5.3
+Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXpm-%{version}.tar.bz2
-# Source0-md5:	681b4ceb8de4d7cf6180f05d3b3ef1a5
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXpm-%{version}.tar.bz2
+# Source0-md5:	401332768720b4fc2790006c4cfde82a
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXpm
 Obsoletes:	xpm
@@ -103,7 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog FAQ.html README.html
+%doc AUTHORS CHANGES COPYING ChangeLog FAQ.html README.html
 %attr(755,root,root) %{_libdir}/libXpm.so.*.*.*
 
 %files devel
@@ -119,4 +121,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files utils
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/cxpm
+%attr(755,root,root) %{_bindir}/sxpm
+%{_mandir}/man1/cxpm.1*
+%{_mandir}/man1/sxpm.1*
