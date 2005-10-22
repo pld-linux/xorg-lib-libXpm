@@ -11,7 +11,7 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
