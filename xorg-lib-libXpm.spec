@@ -27,8 +27,8 @@ X Pixmap library.
 Biblioteka X Pixmap.
 
 %package devel
-Summary:	Header files libXpm development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXpm
+Summary:	Header files for libXpm library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXpm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -39,7 +39,7 @@ Obsoletes:	xpm-devel
 X Pixmap library.
 
 This package contains the header files needed to develop programs that
-use these libXpm.
+use libXpm.
 
 %description devel -l pl
 Biblioteka X Pixmap.
