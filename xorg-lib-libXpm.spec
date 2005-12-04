@@ -1,12 +1,12 @@
 Summary:	X Pixmap library
 Summary(pl):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
-Version:	3.5.4
+Version:	3.5.4.1
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/libXpm-%{version}.tar.bz2
-# Source0-md5:	8c7f5b35f8a66f489d6e0bf5997d1784
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXpm-%{version}.tar.bz2
+# Source0-md5:	a23e253e0da7ec4c4be1edaa682bbb52
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -15,7 +15,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXpm
 Obsoletes:	xpm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -123,5 +123,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/cxpm
 %attr(755,root,root) %{_bindir}/sxpm
-%{_mandir}/man1/cxpm.1*
-%{_mandir}/man1/sxpm.1*
+%{_mandir}/man1/cxpm.1x*
+%{_mandir}/man1/sxpm.1x*
