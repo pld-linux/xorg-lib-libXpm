@@ -1,5 +1,5 @@
 Summary:	X Pixmap library
-Summary(pl.UTF-8):   Biblioteka X Pixmap
+Summary(pl.UTF-8):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
 Version:	3.5.6
 Release:	3
@@ -28,7 +28,7 @@ Biblioteka X Pixmap.
 
 %package devel
 Summary:	Header files for libXpm library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXpm
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXpm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -49,7 +49,7 @@ używających biblioteki libXpm.
 
 %package static
 Summary:	Static libXpm library
-Summary(pl.UTF-8):   Biblioteka statyczna libXpm
+Summary(pl.UTF-8):	Biblioteka statyczna libXpm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXpm-static
@@ -67,7 +67,7 @@ Pakiet zawiera statyczną bibliotekę libXpm.
 
 %package utils
 Summary:	X Pixmap utilities
-Summary(pl.UTF-8):   Programy użytkowe dla X Pixmap
+Summary(pl.UTF-8):	Programy użytkowe dla X Pixmap
 Group:		X11/Development/Tools
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	xpm-progs
