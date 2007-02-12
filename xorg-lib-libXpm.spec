@@ -1,5 +1,5 @@
 Summary:	X Pixmap library
-Summary(pl):	Biblioteka X Pixmap
+Summary(pl.UTF-8):   Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
 Version:	3.5.6
 Release:	3
@@ -23,12 +23,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X Pixmap library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka X Pixmap.
 
 %package devel
 Summary:	Header files for libXpm library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXpm
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXpm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -41,15 +41,15 @@ X Pixmap library.
 This package contains the header files needed to develop programs that
 use libXpm.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka X Pixmap.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXpm.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXpm.
 
 %package static
 Summary:	Static libXpm library
-Summary(pl):	Biblioteka statyczna libXpm
+Summary(pl.UTF-8):   Biblioteka statyczna libXpm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXpm-static
@@ -60,14 +60,14 @@ X Pixmap library.
 
 This package contains the static libXpm library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka X Pixmap.
 
-Pakiet zawiera statyczn± bibliotekê libXpm.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXpm.
 
 %package utils
 Summary:	X Pixmap utilities
-Summary(pl):	Programy u¿ytkowe dla X Pixmap
+Summary(pl.UTF-8):   Programy uÅ¼ytkowe dla X Pixmap
 Group:		X11/Development/Tools
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	xpm-progs
@@ -75,8 +75,8 @@ Obsoletes:	xpm-progs
 %description utils
 X Pixmap utilities.
 
-%description utils -l pl
-Programy u¿ytkowe dla X Pixmap.
+%description utils -l pl.UTF-8
+Programy uÅ¼ytkowe dla X Pixmap.
 
 %prep
 %setup -q -n libXpm-%{version}
