@@ -10,6 +10,7 @@ Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.t
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
