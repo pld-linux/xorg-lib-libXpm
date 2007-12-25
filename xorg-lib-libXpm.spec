@@ -10,6 +10,7 @@ Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.t
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+# xgettext is used to create pots (although they are not used for anything yet)
 BuildRequires:	gettext-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
