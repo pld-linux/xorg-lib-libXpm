@@ -8,7 +8,7 @@ Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.tar.bz2
 # Source0-md5:	cd15ee542d9f515538b4462a6f79d977
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 # xgettext is used to create pots (although they are not used for anything yet)
 BuildRequires:	gettext-devel
@@ -109,6 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS CHANGES COPYING ChangeLog FAQ.html README.html
 %attr(755,root,root) %{_libdir}/libXpm.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXpm.so.4
 
 %files devel
 %defattr(644,root,root,755)
