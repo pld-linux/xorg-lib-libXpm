@@ -1,12 +1,12 @@
 Summary:	X Pixmap library
 Summary(pl.UTF-8):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
-Version:	3.5.7
-Release:	2
+Version:	3.5.8
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.tar.bz2
-# Source0-md5:	cd15ee542d9f515538b4462a6f79d977
+# Source0-md5:	38e58e72d476a74298a59052fde185a3
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
