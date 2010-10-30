@@ -1,14 +1,14 @@
 Summary:	X Pixmap library
 Summary(pl.UTF-8):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
-Version:	3.5.8
-Release:	2
+Version:	3.5.9
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.tar.bz2
-# Source0-md5:	38e58e72d476a74298a59052fde185a3
+# Source0-md5:	2de3a1b9541f4b3a6f9d84b69d25530e
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 # xgettext is used to create pots (although they are not used for anything yet)
 BuildRequires:	gettext-devel
@@ -17,7 +17,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-util-util-macros >= 1.8
 Obsoletes:	libXpm
 Obsoletes:	xpm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -85,7 +85,7 @@ Programy użytkowe dla X Pixmap.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -96,8 +96,7 @@ Programy użytkowe dla X Pixmap.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir=%{_pkgconfigdir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -107,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS CHANGES COPYING ChangeLog FAQ.html README.html
+%doc AUTHORS COPYING ChangeLog NEWS.old README doc/{FAQ.html,README.html,xpm.PS.gz}
 %attr(755,root,root) %{_libdir}/libXpm.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXpm.so.4
 
