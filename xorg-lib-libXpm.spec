@@ -125,5 +125,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/cxpm
 %attr(755,root,root) %{_bindir}/sxpm
-%{_mandir}/man1/cxpm.1x*
-%{_mandir}/man1/sxpm.1x*
+%{_mandir}/man1/cxpm.1*
+%{_mandir}/man1/sxpm.1*
