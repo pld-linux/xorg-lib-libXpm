@@ -11,7 +11,7 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 # xgettext is used to create pots (although they are not used for anything yet)
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
