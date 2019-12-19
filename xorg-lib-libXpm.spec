@@ -1,12 +1,12 @@
 Summary:	X Pixmap library
 Summary(pl.UTF-8):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
-Version:	3.5.12
+Version:	3.5.13
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.tar.bz2
-# Source0-md5:	20f4627672edb2bd06a749f11aa97302
+# Source0-md5:	6f0ecf8d103d528cfc803aa475137afa
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -17,6 +17,8 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
+BuildRequires:	xorg-proto-xextproto-devel
+BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
 BuildRequires:	xorg-util-util-macros >= 1.8
 Obsoletes:	libXpm
 Obsoletes:	xpm
@@ -106,7 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog NEWS.old README doc/{FAQ.html,README.html,xpm.PS.gz}
+%doc AUTHORS COPYING ChangeLog NEWS.old README.md doc/{FAQ.html,README.html,xpm.PS.gz}
 %attr(755,root,root) %{_libdir}/libXpm.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXpm.so.4
 
