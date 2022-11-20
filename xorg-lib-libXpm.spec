@@ -1,12 +1,12 @@
 Summary:	X Pixmap library
 Summary(pl.UTF-8):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
-Version:	3.5.13
+Version:	3.5.14
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.tar.bz2
-# Source0-md5:	6f0ecf8d103d528cfc803aa475137afa
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.tar.xz
+# Source0-md5:	8001c7e6d2727609da2a78d8e08a2977
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -14,14 +14,16 @@ BuildRequires:	automake
 BuildRequires:	gettext-tools
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
 BuildRequires:	xorg-util-util-macros >= 1.8
-Obsoletes:	libXpm
-Obsoletes:	xpm
+BuildRequires:	xz
+Obsoletes:	libXpm < 1:3.5.2
+Obsoletes:	xpm < 1.3.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,8 +38,8 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXpm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
-Obsoletes:	libXpm-devel
-Obsoletes:	xpm-devel
+Obsoletes:	libXpm-devel < 1:3.5.2
+Obsoletes:	xpm-devel < 1.3.4
 
 %description devel
 X Pixmap library.
@@ -56,8 +58,8 @@ Summary:	Static libXpm library
 Summary(pl.UTF-8):	Biblioteka statyczna libXpm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXpm-static
-Obsoletes:	xpm-static
+Obsoletes:	libXpm-static < 1:3.5.2
+Obsoletes:	xpm-static < 1.3.4
 
 %description static
 X Pixmap library.
@@ -74,7 +76,7 @@ Summary:	X Pixmap utilities
 Summary(pl.UTF-8):	Programy użytkowe dla X Pixmap
 Group:		X11/Development/Tools
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	xpm-progs
+Obsoletes:	xpm-progs < 1.3.4
 
 %description utils
 X Pixmap utilities.
@@ -118,6 +120,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXpm.la
 %{_includedir}/X11/xpm.h
 %{_pkgconfigdir}/xpm.pc
+%{_mandir}/man3/Xpm*.3*
 
 %files static
 %defattr(644,root,root,755)
