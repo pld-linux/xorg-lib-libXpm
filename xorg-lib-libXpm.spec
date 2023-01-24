@@ -2,7 +2,7 @@ Summary:	X Pixmap library
 Summary(pl.UTF-8):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
 Version:	3.5.15
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.tar.xz
@@ -22,6 +22,8 @@ BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xz
+Suggests:	gzip
+Suggests:	ncompress
 Obsoletes:	libXpm < 1:3.5.2
 Obsoletes:	xpm < 1.3.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -93,7 +95,11 @@ Programy użytkowe dla X Pixmap.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	XPM_PATH_COMPRESS=/usr/bin/compress \
+	XPM_PATH_GZIP=/usr/bin/gzip \
+	XPM_PATH_UNCOMPRESS=/usr/bin/uncompress
+
 %{__make}
 
 %install
