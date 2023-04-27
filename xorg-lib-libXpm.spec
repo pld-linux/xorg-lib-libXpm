@@ -1,18 +1,18 @@
 Summary:	X Pixmap library
 Summary(pl.UTF-8):	Biblioteka X Pixmap
 Name:		xorg-lib-libXpm
-Version:	3.5.15
-Release:	2
+Version:	3.5.16
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXpm-%{version}.tar.xz
-# Source0-md5:	b3c58c94e284fd6940d3615e660a0007
+# Source0-md5:	5073cf59174a2cadde220187759b2e7c
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 # xgettext is used to create pots (although they are not used for anything yet)
 BuildRequires:	gettext-tools
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel
